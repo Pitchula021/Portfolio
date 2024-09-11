@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="Style.css">
+    <link rel="icon" href="imagens/home.png" type="image/png">
+    <title>Portfólio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav id="cbs">
+        <a href="#" class="logo" id="nome2">Leonardo<br>Prates</a>
+        <a href="#" class="logo" id="nome2">Daniel<br>Marcelino</a>
+        <a href="#" class="active">Home</a>
+        <a href="https://wa.me/5519989848811?text=Ola,%20como%20voc%C3%AA%20esta" target="_blank" rel="external" id="Contato-btn">Contato</a>
+    </nav>
+
+      <section class="home">
+        <div class="home-img">
+            <img src="imagens/home.jpg" alt="home image">
+        </div>
+        <div class="home-content">
+            <h1>Olá, me chamo<span id="nome"> Leonardo</span></h1>
+            <h3 class="typing-text">Sou<span> aspirante a desenvolvedor</span></h3>
+            <p>Sou iniciante na área de programação, apresento resoluções de exercícios de <span id="ling">JavaScript</span>, idealizado pelos meus professores Rodrigo Temóteo, Juliana Baptista e Samuel.</p>
+
+            <div class="social-icons">
+                <a href="https://www.instagram.com/web._.leonardo?igsh=NmF5NjNteHV5anh2" target="_blank" rel="external"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.facebook.com/leonardo.prates.7967747?mibextid=ZbWKwL" target="_blank" rel="external"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://wa.me/5519989848811?text=Ola,%20como%20voc%C3%AA%20esta" target="_blank" rel="external"><i class="fa-brands fa-whatsapp"></i></a>
+            </div>
+            <a href="https://www.instagram.com/web._.leonardo?igsh=NmF5NjNteHV5anh2" class="btn">Fale comigo!</a>
+            <script src="https://kit.fontawesome.com/516e7dd736.js" crossorigin="anonymous"></script>
+        </div>
+    </section>
+
+    <header>
+        <h1>Exercícios de JavaScript</h1>
+        <p>Esses são os exercícios requisitados.</p>
+    </header>
+
+    <!-- Exercício 1 -->
+    <section id="exercicio-1">
+        <h2>Exercício 1</h2>
+        <p>Escreva um programa que peça ao usuário para inserir um número. O programa deve verificar se o número é positivo, negativo ou neutro.</p>
+        <button class="styled-button"onclick="exercicio1()">Executar Exercício 1</button>
+        <script>
+            function exercicio1() {
+                let numero = parseFloat(prompt("Digite um número:"));
+                if (isNaN(numero)) {
+                    alert("Por favor, insira um valor numérico válido.");
+                } else {
+                    if (numero > 0) {
+                        alert("O número é positivo.");
+                    } else if (numero < 0) {
+                        alert("O número é negativo.");
+                    } else {
+                        alert("O número é neutro.");
+                    }
+                }
+            }
+        </script>
+    </section>
+
+    <!-- Exercício 2 -->
+    <section id="exercicio-2">
+        <h2>Exercício 2</h2>
+        <p>Crie um programa que peça ao usuário sua idade e exiba uma mensagem informando se ele é criança, adolescente, adulto ou idoso.</p>
+        <button class="styled-button"onclick="exercicio2()">Executar Exercício 2</button>
+        <script>
+            function exercicio2() {
+                let idade = parseInt(prompt("Digite sua idade:"));
+                if (idade >= 0 && idade <= 12) {
+                    alert("Você é uma criança.");
+                } else if (idade >= 13 && idade <= 17) {
+                    alert("Você é um adolescente.");
+                } else if (idade >= 18 && idade <= 64) {
+                    alert("Você é um adulto.");
+                } else if (idade >= 65 && idade <= 125) {
+                    alert("Você é um idoso.");
+                } else if (idade >= 126) {
+                    alert("Parabéns! Você é a pessoa mais velha do mundo.");
+                } else {
+                    alert("Idade inválida, escreva somente números positivos.");
+                }
+            }
+        </script>
+    </section>
+
+    <!-- Exercício 3 -->
+    <section id="exercicio-3">
+        <h2>Exercício 3</h2>
+        <p>Escreva um programa que peça ao usuário para inserir um número correspondente a um dia da semana (1 para Domingo, 2 para Segunda, etc.).</p>
+        <button class="styled-button"onclick="exercicio3()">Executar Exercício 3</button>
+        <script>
+            function exercicio3() {
+                let dia = parseInt(prompt("Digite um número de 1 a 7 para o dia da semana:"));
+                switch (dia) {
+                    case 1: alert("O dia da semana é Domingo."); break;
+                    case 2: alert("O dia da semana é Segunda-feira."); break;
+                    case 3: alert("O dia da semana é Terça-feira."); break;
+                    case 4: alert("O dia da semana é Quarta-feira."); break;
+                    case 5: alert("O dia da semana é Quinta-feira."); break;
+                    case 6: alert("O dia da semana é Sexta-feira."); break;
+                    case 7: alert("O dia da semana é Sábado."); break;
+                    default: alert("Número inválido. Digite um número de 1 a 7."); break;
+                }
+            }
+        </script>
+    </section>
+
+    <!-- Exercício 4 -->
+    <section id="exercicio-4">
+        <h2>Exercício 4</h2>
+        <p>Crie um programa que imprima os números de 1 a 10 utilizando um laço for.</p>
+        <button class="styled-button"onclick="exercicio4()">Executar Exercício 4</button>
+        <script>
+            function exercicio4() {
+                for (let i = 1; i <= 10; i++) {
+                    alert(i + ".");
+                }
+            }
+        </script>
+    </section>
+
+    <!-- Exercício 5 -->
+    <section id="exercicio-5">
+        <h2>Exercício 5</h2>
+        <p>Escreva um programa que peça ao usuário para inserir números inteiros repetidamente até que ele insira o número zero. O programa deve exibir a soma de todos os números inseridos.</p>
+        <button class="styled-button"onclick="exercicio5()">Executar Exercício 5</button>
+        <script>
+            function exercicio5() {
+                let sum = 0;
+                let number;
+                do {
+                    let input = prompt("Insira um número inteiro (0 para sair):");
+                    number = parseInt(input, 10);
+                    if (isNaN(number)) {
+                        alert("Entrada inválida. Por favor, insira um número inteiro.");
+                        continue;
+                    }
+                    sum += number;
+                } while (number !== 0);
+                alert("A soma de todos os números inseridos é: " + sum + ".");
+            }
+        </script>
+    </section>
+
+    <!-- Exercício 6 -->
+    <section id="exercicio-6">
+        <h2>Exercício 6</h2>
+        <p>Crie um programa que peça ao usuário para adivinhar um número entre 1 e 10. O programa deve continuar pedindo ao usuário para tentar novamente até que ele acerte.</p>
+        <button class="styled-button"onclick="exercicio6()">Executar Exercício 6</button>
+        <script>
+            function exercicio6() {
+                const numeroSecreto = Math.floor(Math.random() * 10) + 1;
+                let tentativa;
+                do {
+                    tentativa = parseInt(prompt("Adivinhe um número entre 1 e 10:"));
+                    if (isNaN(tentativa) || tentativa < 1 || tentativa > 10) {
+                        alert("Por favor, insira um número válido entre 1 e 10.");
+                    } else if (tentativa !== numeroSecreto) {
+                        alert("Tente novamente.");
+                    }
+                } while (tentativa !== numeroSecreto);
+                alert("Parabéns! Você acertou o número.");
+            }
+        </script>
+    </section>
+
+    
+    <!-- Exercício 7 -->
+    <section id="exercicio-7">
+        <h2>Exercício 7</h2>
+        <p>Crie um programa que peça ao usuário para inserir 5 números inteiros e os armazene em um vetor. Em seguida, exiba o maior e o menor número inserido.</p>
+        <button class="styled-button"onclick="exercicio7()">Executar Exercício 7</button>
+        <script>
+            function exercicio7() {
+                let numbers = [];
+                for (let i = 0; i < 5; i++) {
+                    let input = prompt("Insira um número inteiro (" + (i + 1) + "/5):");
+                    let number = parseInt(input, 10);
+                    if (isNaN(number)) {
+                        alert("Entrada inválida. Por favor, insira um número inteiro.");
+                        i--;
+                    } else {
+                        numbers.push(number);
+                    }
+                }
+                let maxNumber = Math.max(...numbers);
+                let minNumber = Math.min(...numbers);
+                alert("O maior número inserido é: " + maxNumber + ".");
+                alert("O menor número inserido é: " + minNumber + ".");
+            }
+        </script>
+    </section>
+
+    <!-- Exercício 8 -->
+    <section id="exercicio-8">
+        <h2>Exercício 8</h2>
+        <p>Crie uma função chamada encontrarMedia que receba um vetor de números como argumento e retorne a média desses números. Em seguida, crie um programa que peça ao usuário para inserir a quantidade de números que ele deseja informar, armazene esses números em um vetor, e utilize a função para exibir a média.</p>  
+        <button class="styled-button"onclick="exercicio8()">Executar Exercício 8</button>
+        <script>
+            function exercicio8() {
+                function encontrarMedia(numeros) {
+                    let soma = 0;
+                    for (let i = 0; i < numeros.length; i++) {
+                        soma += numeros[i];
+                    }
+                    return soma / numeros.length;
+                }
+                let quantidade = parseInt(prompt("Quantos números você deseja informar?"), 10);
+                if (isNaN(quantidade) || quantidade <= 0) {
+                    alert("Quantidade inválida. Por favor, insira um número inteiro.");
+                    return;
+                }
+                let numeros = [];
+                for (let i = 0; i < quantidade; i++) {
+                    let input = prompt("Insira o número (" + (i + 1) + "/" + quantidade + "):");
+                    let numero = parseInt(input, 10);
+                    if (isNaN(numero)) {
+                        alert("Entrada inválida. Por favor, insira um número.");
+                        i--;
+                        continue;
+                    }
+                    numeros.push(numero);
+                }
+                let media = encontrarMedia(numeros);
+                alert("A média dos números inseridos é: " + media + ".");
+            }
+        </script>
+    </section>
+
+    <!-- Exercício 9 -->
+    <section id="exercicio-9">
+        <h2>Exercício 9</h2>
+        <p>Crie um código que percorra um vetor de números e armazene em um novo vetor apenas os números que são maiores que um valor específico. Em seguida, exiba o novo vetor.</p>
+        <button class="styled-button"onclick="exercicio9()">Executar Exercício 9</button>
+        <script>
+            function exercicio9() {
+                let numeros = [2, 3, 5, 7, 8, 12, 17, 18, 19, 22, 27, 31, 34, 35, 42, 43, 51, 56, 58, 64, 66, 78, 84, 89, 93, 112, 256, 389, 472, 583, 698, 741];
+                let valorEspecifico;
+                do {
+                    valorEspecifico = prompt("Insira um valor específico:");
+                    if (isNaN(valorEspecifico) || valorEspecifico === "") {
+                        alert("Por favor, insira um número válido.");
+                    } else {
+                        valorEspecifico = parseInt(valorEspecifico, 10);
+                    }
+                } while (isNaN(valorEspecifico) || valorEspecifico === "");
+                let maioresQueValor = numeros.filter(numero => numero > valorEspecifico);
+                if (maioresQueValor.length > 0) {
+                    alert("Os números maiores que " + valorEspecifico + " são: " + maioresQueValor.join(", ") + ".");
+                } else {
+                    alert("Não há números maiores que " + valorEspecifico + " no vetor.");
+                }
+            }
+        </script>
+    </section>
+
+<!-- Exercício 10 -->
+    <section id="exercicio-10">
+        <h2>Exercício 10</h2>
+        <p>Dado um vetor de palavras, crie um código que percorra o vetor e conte quantas vezes uma palavra específica aparece. Armazene o resultado em uma variável <code>contagem</code> e exiba o resultado.</p>
+        <button class="styled-button"onclick="exercicio10()">Executar Exercício 10</button>
+        <script>
+            function exercicio10() {
+                let palavras = ['casa', 'carro', 'livro', 'casa', 'livro', 'mesa', 'carro', 'casa', 'livro', 'janela'];
+                let palavraEspecifica = prompt("Digite a palavra que deseja contar:");
+                if (!palavraEspecifica) {
+                    alert("Entrada inválida. Por favor, insira uma palavra.");
+                    return;
+                }
+                
+                let contagem = 0;
+                for (let i = 0; i < palavras.length; i++) {
+                    if (palavras[i] === palavraEspecifica) {
+                        contagem++;
+                    }
+                }
+
+                alert("A palavra '" + palavraEspecifica + "' aparece " + contagem + " vez(es) no vetor.");
+            }
+        </script>
+    </section>
+	<img src="imagens/ld.jpg" height="300" width="300">
+<footer class="rodape">
+    <h5 class="rodape__texto"> <a href="#">® 2024 - Desenvolvido pelo aluno Leonardo Prates Beserra Cavalcante, com ajuda de Daniel Marcelino</a> </h5>
+    <h5 class="rodape__texto"> <a href="#">® 2024 - Todos os direitos reservados ao autor</a> </h5>
+	<h5 class="rodape__texto"> <a href="#">TRABALHO ACADÊMICO SEM FINS LUCRATIVOS</a> </h5>
+</footer>
+ </body>
+</html>
